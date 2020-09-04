@@ -33,7 +33,7 @@ function ($, CustomSelect) {
 
       $(input).find('option[selected=selected]').each(function (index, item) {
         var data = $(this).data();
-        var html = opt.appendHtml;
+        var html = opt.appendHtml ? opt.appendHtml : opt.html;
         var keys = Object.keys($(this).data());
         for (i = 0; i < keys.length; i++) {
           html = html.replace('#' + keys[i] + '#', data[keys[i]]);
@@ -85,7 +85,7 @@ function ($, CustomSelect) {
 
         var lastSelected = $(input).find('option[data-valselected=' + valselected + ']');
         var data = $(lastSelected).data();
-        var html = _options.appendHtml;
+        var html = _options.appendHtml ? _options.appendHtml : _options.html;
         var keys = Object.keys($(lastSelected).data());
         for (i = 0; i < keys.length; i++) {
           html = html.replace('#' + keys[i] + '#', data[keys[i]]);
