@@ -36,3 +36,31 @@ $('#country').customSelect({
   appendHtml: '<div class="county-flg">#country#</div>',
 });
 ```
+
+# Options list
+
+| Options | Description | Required |
+| --- | --- | --- |
+| html | HTML string that will loop to show the dropdown list | Yes |
+| appendHtml | When user select from the dropdown it will show the selected entries | Optional |
+| after | Provide unique element `.class` or `#id` this is where you want to append the dropdown html | Optional |
+| data-valselected | This should unique string withou spaces with `select` `option` | Yes |
+
+
+
+# Events list
+
+| event | Description |
+| --- | --- |
+| onfocus | When user click inside the input this event will be triggered
+| onfocusout | When user click outside of the input this event will be triggered
+| onSelect | When user select from the list this event will be triggered
+| onSearch | When user type text in input this event will be triggered you can ajax on this event to show the data from data base
+
+# Functions list
+
+| Function | Description |
+| --- | --- |
+| customSelect | Need to call this function to initiate the dropdown thi function requried options you can also add the call back function on it.
+| update | Need to call this function when you want to update the data in dropdown this function required the data array with same object that used with select options.
+
